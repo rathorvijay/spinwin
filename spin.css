@@ -1,0 +1,191 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+    background: url(spin.jpg); /* background image*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.mainbox{
+    position:relative;
+    width: 500px;
+    height:500px;
+    margin-top: 50px;
+}
+.mainbox:after{
+    position:absolute;
+    content:"";
+    width: 100%;
+    height: 100%;
+    background:url(arrow.png); /*arrow image */
+    background-repeat: no-repeat;
+    background-size: 15%;
+    left:99%;
+    right:48%;
+    top:47%;
+    transform:rotate();
+}
+.box{
+    width: 100%;
+    height: 100%;
+    position:relative;
+    border-radius: 50%;
+    border: 10px solid whitesmoke;
+    overflow: hidden;
+    transition: all ease-in-out 5s;
+    transform: rotate(90deg);
+
+}
+span{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+}
+.span1{
+    clip-path: polygon(0 17%,0 50%,50% 50%);
+    background-color: green;
+}
+.span2{
+    clip-path: polygon(0 17%,30% 0%,50% 50%);
+    background-color:red;
+}
+.span3{
+    clip-path: polygon(30% 0, 71% 0%,50% 50%);
+    background-color: yellow;
+}
+.span4{
+    clip-path: polygon(71% 0%,100% 18%,50% 50%);
+    background-color: rgb(26, 0, 128);
+}
+.span5{
+    clip-path: polygon(100% 18%,100% 50%,50% 50%);
+    background-color: rgb(173, 35, 164);
+}
+.box2 .span3{
+    background-color: greenyellow;
+}
+.box2{
+    width: 100%;
+    height: 100%;
+    transform:rotate(180deg);
+}
+.box2 .span1{
+    background:#333;
+}
+.font{
+    color:white;
+    font-size: 20px;
+}
+.box1 .span1 h5{
+    position: absolute;
+    top:40%;
+    right: 63%;
+    transform: rotate(200deg);
+    text-align: center;
+}
+.box1 .span2 h5{
+    position: absolute;
+    top:30%;
+    right: 57%;
+    transform: rotate(-140deg);
+    text-align: center;
+}
+.box1 .span3 h5{
+    position: absolute;
+    top:22%;
+    right: 38%;
+    transform: rotate(-90deg);
+    text-align: center;
+}
+.box1 .span4 h5{
+    position: absolute;
+    top:25%;
+    right: 16%;
+    transform: rotate(-45deg);
+    text-align: center;
+}
+.box1 .span5 h5{
+    position: absolute;
+    top:40%;
+    right: 6%;
+    transform: rotate(-15deg);
+    text-align: center;
+}
+.box2 .span1 h5{
+    position: absolute;
+    top:34%;
+    right: 70%;
+    transform: rotate(200deg);
+    text-align: center;
+    font-size: 50px;
+}
+.box2 .span2 h5{
+    position: absolute;
+    top:28%;
+    right: 54%;
+    transform: rotate(-130deg);
+    text-align: center;
+}
+.box2 .span3 h5{
+    position: absolute;
+    top:15%;
+    right: 40%;
+    transform: rotate(270deg);
+    text-align: center;
+}
+.box2 .span4 h5{
+    position: absolute;
+    top:25%;
+    right: 15%;
+    transform: rotate(310deg);
+    text-align: center;
+}
+.box2 .span5 h5{
+    position: absolute;
+    top:38%;
+    right: 6%;
+    transform: rotate(-20deg);
+    text-align: center;
+}
+.spin{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 75px;
+    height:75px;
+    border-radius: 50%;
+    border: 4px solid white;
+    color:white;
+    box-shadow: 0 5px 20px black;
+    font-size: 22px;
+    cursor: pointer;
+    z-index:1000;
+    background: blue;
+    font-weight: bold;
+}
+.spin:active{
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+} 
+ .mainbox.animate::after{
+    animation: animateArrow 0.7s ease infinite;
+} 
+audio{
+    display:none;
+}
+ @keyframes animateArrow{
+    50%{
+        right: -50px;
+    }
+} 
